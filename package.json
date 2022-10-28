@@ -1,11 +1,10 @@
 {
   "name": "koa-example",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+       "start": "node ./src/server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +14,14 @@
     "koa-body": "^5.0.0",
     "koa-router": "^12.0.0",
     "mongoose": "^6.6.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camazaru/framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/camazaru/framework/issues"
+  },
+  "homepage": "https://github.com/camazaru/framework#readme",
+  "description": ""
 }

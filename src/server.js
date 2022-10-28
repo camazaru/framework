@@ -1,12 +1,17 @@
 import Koa from "koa";
 import koaBody from "koa-body";
-import router from "./routes/index.js";
+import router from "../routes/index.js"
 import mongoose from "mongoose";
 
 const app = new Koa();
 
+function print(objeto)
+{
+    console.info(util.inspect(objeto,false,12,true))
+}
+
 mongoose.connect(
-  "mongodb+srv://salvax:salva@cluster0.uriryq6.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb+srv://cmcarlos:cmcarlos@mibase.ikdrbg0.mongodb.net/?retryWrites=true&w=majority"
 );
 
 app.use(koaBody());

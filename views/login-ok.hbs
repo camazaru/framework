@@ -1,0 +1,99 @@
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="text-center">
+            <h2><i>Bienvenido {{usuario}}</i>  <button class="btn btn-outline-danger my-5" onclick="logout()">LOGOUT</button></h2>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div id="divFormulario" class="col-md-8 offset-md-2">
+        <dv class="row">
+            <div class="col-md-12 text-center">
+                <h1>Menu</h1>
+            </div>
+        </dv>
+        <div class="mt-3 row">
+            <div class="col-md-10 offset-md-1 text-center">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a class="col-md-3 btn btn-outline-primary" href="/api/profile">PERFIL</a>
+                        <a class="col-md-3 btn btn-outline-primary" href="/api/productos">PRODUCTOS</a>
+                        <a class="col-md-4 btn btn-outline-primary" href="/api/carritos">CARRITO</a>
+                    </div>    
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="divFormulario" class="col-md-8 offset-md-2">
+        <dv class="row">
+            <div class="col-md-12 text-center">
+                <h1>Mensajes <span id="spnComprencion"></span></h1>
+            </div>
+        </dv>
+        <div class="row">
+            <div id="divFormularioEmail" class="col-md-8 offset-md-2">
+                <div class="form-group">
+                    <label for="emailInput">Email</label>
+                    <input type="text" class="form-control" id="emailInput" placeholder="email">
+                </div>
+                <div class="form-group">
+                    <label for="nombreInput">Nombre</label>
+                    <input type="text" class="form-control" id="nombreInput" placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <label for="apellidoInput">Apellido</label>
+                    <input type="text" class="form-control" id="apellidoInput" placeholder="Apellido">
+                </div>
+                <div class="form-group">
+                    <label for="edadInput">Edad</label>
+                    <input type="number" class="form-control" id="edadInput" placeholder="Edad">
+                </div>
+                <div class="form-group">
+                    <label for="aliasInput">Alias</label>
+                    <input type="text" class="form-control" id="aliasInput" placeholder="Alias">
+                </div>
+                <div class="form-group">
+                    <label for="avatarInput">Avatar</label>
+                    <input type="text" class="form-control" id="avatarInput" placeholder="Avatar">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div id="divFormularioPool" class="col-md-12">
+                <div id="messangesPool" style="background-color:white"></div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div id="divFormulario" class="col-md-8 offset-md-2">
+                <form id="messageForm" name="messageForm">
+                    <div class="form-group">
+                        <label for="messageInput">Message</label>
+                        <input type="text" class="form-control" id="messageInput" placeholder="Message">
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./socket.io/socket.io.js"></script>
+<script src="./client.socket.js"></script>
+ 
+
+<script>
+    function redireccionar(pagina) {
+        location.href = pagina;
+    } 
+
+    function logout() {
+        console.log('logout');
+        redireccionar('/logout')
+    }
+</script>
