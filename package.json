@@ -1,0 +1,29 @@
+{
+  "name": "koa-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ./src/server.js",
+    "test": "mocha ./tests/*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "koa": "^2.13.4",
+    "chai": "^4.3.6",
+    "bcrypt": "^5.1.0",
+    "koa-body": "^5.0.0",
+    "koa-router": "^12.0.0",
+    "dotenv": "^16.0.3",
+    "faker": "^5.5.3",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^10.0.0",
+    "mongoose": "^6.6.6",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.0"
+  }
+}
